@@ -3,6 +3,17 @@ import subprocess
 import ast
 import pickle
 from .constants import *
+# Get condition lists
+import itertools
+def getranklist(jsonfile):
+    def getrank(dt):
+        listolist=[data[x] for x in data['rankorder']]
+        return listolist
+    data=json.load(open(jsonfile))
+    ranktuple=list(itertools.product(*getrank(data)))
+    ranklist=[list(x) for x in ranktuple]
+    return ranklist
+
 ##### Helper functions############3
 #  Saves & Load obj from pickled file. 
 #######################

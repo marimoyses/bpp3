@@ -1,0 +1,11 @@
+{
+  "deltaT": [1,2],
+  "optT": [60],
+  "size": [120,200],
+  "minsize": [1,2,3],
+  "SV.reffasta": [80],
+  "optsize": [100],
+  "procedure": ["paired"],
+  "maskstatus":["Mask"],
+  "rankorder": ["maskstatus","procedure","optT","deltaT","size","minsize","optsize"]
+}

@@ -121,7 +121,7 @@ class BpP3obj():
         cmd='sed -i "s/optS/{}/;s/maxS/{}/g" P3tempSettings.temp'.format(str(optsize),str(length))
         return_code=subprocess.call(cmd,shell=True)
     # @profile
-    def runP3(self,buffer,maxlength=500):
+    def runP3(self,buffer,maxlength=500,rankjson):
         #  This runs the entire P3 analysis, iterativly loosening the P3 constraints as indicated in self.helper.P3ranklist
         #  When P3 returns non-zero result for condition, stop and will not consider lesser conditions
         #  Getting the sequence dictated by the P3 settings, joining together, masking are done here
@@ -130,14 +130,15 @@ class BpP3obj():
         #  Each primer in p3outputobj is parsed into primerobj. For more information see helper.py
         #  The primers are gathered into the list self.data[ID]['primers'] for each CNVID
         #  The CNVs that did not result in a single valid primer is collected in the list self.failed
+        ranklist=helper.getranklist(rankjson)
         self.failed=[]
         for ID in self.ids():
             print("Running P3 on CNV ID {}".format(ID))
             self.data[ID]['primers']=[]            
             condition_number=0
             npairs=0
-            while npairs==0 and condition_number<len(helper.P3ranklist):  # Iterate through the conditions until non zero result
-                condition=helper.P3ranklist[condition_number]
+            while npairs==0 and condition_number<len(ranklist):  # Iterate through the conditions until non zero result
+                condition=ranklist[condition_number]
                 [maskstatus,procedure,optT,deltaT,length,minsize,optsize]=condition
                 self.data[ID]['maskstatus']=maskstatus
                 try:
