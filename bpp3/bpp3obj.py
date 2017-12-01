@@ -3,6 +3,7 @@ import subprocess
 import time
 import os
 import pickle
+
 #################
 # This script calls Primer3 repeatedly, at decreasing order of stringency, until a set is found
 # BLAT is performed on the resulting primer pairs
@@ -121,7 +122,7 @@ class BpP3obj():
         cmd='sed -i "s/optS/{}/;s/maxS/{}/g" P3tempSettings.temp'.format(str(optsize),str(length))
         return_code=subprocess.call(cmd,shell=True)
     # @profile
-    def runP3(self,buffer,maxlength=500,rankjson):
+    def runP3(self,rankjson,buffer=1,maxlength=500):
         #  This runs the entire P3 analysis, iterativly loosening the P3 constraints as indicated in self.helper.P3ranklist
         #  When P3 returns non-zero result for condition, stop and will not consider lesser conditions
         #  Getting the sequence dictated by the P3 settings, joining together, masking are done here

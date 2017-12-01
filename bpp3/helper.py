@@ -2,6 +2,7 @@ import re
 import subprocess
 import ast
 import pickle
+import json
 from .constants import *
 # Get condition lists
 import itertools
