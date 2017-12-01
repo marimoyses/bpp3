@@ -1,0 +1,5 @@
+chrA	startA	dirA	chrB	startB	dirB
+chr19	3025396	+	chr20	143234	-
+chr3	1194275	+	chr4	1194801	+
+chr6	8670292	-	chr7	867030	-
+chr3	1194771	-	chr4	1194803	+

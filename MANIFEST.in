@@ -1,0 +1,3 @@
+include bpp3/PD_P3Settings_Run1.txt
+include testdata/*
+include tests/*

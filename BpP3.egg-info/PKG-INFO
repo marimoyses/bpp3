@@ -1,0 +1,32 @@
+Metadata-Version: 1.1
+Name: BpP3
+Version: 0.0.post0.dev1+nc33d764
+Summary: Add a short description here!
+Home-page: http://...
+Author: awacs
+Author-email: haroldzwang@gmail.com
+License: mit
+Description: ====
+        BpP3
+        ====
+        
+        
+        Add a short description here!
+        
+        
+        Description
+        ===========
+        
+        A LONGER DESCRIPTION OF YOUR PROJECT GOES HERE...
+        
+        
+        Note
+        ====
+        
+        This project has been set up using PyScaffold 2.5.5. For details and usage
+        information on PyScaffold see http://pyscaffold.readthedocs.org/.
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
