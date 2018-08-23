@@ -6,6 +6,6 @@
   "SV.reffasta": [80],
   "optsize": [100],
   "procedure": ["paired"],
-  "maskstatus":["Mask"],
+  "maskstatus": ["Mask"],
   "rankorder": ["maskstatus","procedure","optT","deltaT","size","minsize","optsize"]
 }

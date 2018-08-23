@@ -50,9 +50,9 @@ class BpP3obj():
             self.data[ID]["CHR_B"]=helper.validate(self.data[ID]["CHR_B"])    
             # Check orientation
             assert self.data[ID]["DIR_A"]=="+" or self.data[ID]["DIR_A"]=="-",\
-            '{} is not valid orientation'.format( self.data[ID]["DIR_A"])
+            "{} is not valid orientation for variant {}".format( self.data[ID]["DIR_A"],ID)
             assert self.data[ID]["DIR_B"]=="+" or self.data[ID]["DIR_B"]=="-",\
-            '{} is not valid orientation'.format( self.data[ID]["DIR_B"])
+            "{} is not valid orientation for variant {}".format( self.data[ID]["DIR_B"],ID)
             # Check position is number and make it int            
             try:
                 self.data[ID]["START_A"]=int(self.data[ID]["START_A"])
