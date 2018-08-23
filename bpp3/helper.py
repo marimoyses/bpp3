@@ -2,7 +2,7 @@ import re
 import subprocess
 import ast
 import pickle
-import json
+import simplejson as json
 from .constants import *
 # Get condition lists
 import itertools
@@ -10,7 +10,8 @@ def getranklist(jsonfile):
     def getrank(dt):
         listolist=[data[x] for x in data['rankorder']]
         return listolist
-    data=json.load(open(jsonfile))
+    with open('conditions.json') as f:
+        data = json.load(f)
     ranktuple=list(itertools.product(*getrank(data)))
     ranklist=[list(x) for x in ranktuple]
     return ranklist
