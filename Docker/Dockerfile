@@ -31,7 +31,7 @@ RUN git clone -b master https://github.com/talkowski-lab/bpp3.git /opt/bpp3 && \
     MACHTYPE=x86_64 && \
     export MACHTYPE && \
     mkdir -p ~/bin/x86_64 && \
-    cp gfPcr ~/bin/x86_64/
+    cp gfPcr ~/bin/x86_64/ && \
     cd blatSrc && \
     make
 ENV PATH="/opt/bpp3/Software/primer3-2.3.7/src:/root/bin/x86_64:${PATH}"
