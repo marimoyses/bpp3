@@ -21,7 +21,6 @@ VOLUME ["/root/.config"]
 # Install svtk
 RUN git clone -b master https://github.com/talkowski-lab/bpp3.git /opt/bpp3 && \
     cd /opt/bpp3 && \
-    git checkout c4aa51af0077462fdb834ac6cf349cc503d57335 && \
     pip install -e . && \
     cd Software && \
     tar -xzvf primer3-2.3.7.tar.gz && \
@@ -29,10 +28,11 @@ RUN git clone -b master https://github.com/talkowski-lab/bpp3.git /opt/bpp3 && \
     make all && \
     cd - && \
     unzip blatSrc35.zip && \
-    cd blatSrc && \
     MACHTYPE=x86_64 && \
     export MACHTYPE && \
     mkdir -p ~/bin/x86_64 && \
+    cp gfPcr ~/bin/x86_64/
+    cd blatSrc && \
     make
 ENV PATH="/opt/bpp3/Software/primer3-2.3.7/src:/root/bin/x86_64:${PATH}"
 RUN apt-get install -y libbz2-dev liblzma-dev libcurl4-openssl-dev
