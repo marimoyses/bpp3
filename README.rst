@@ -2,14 +2,13 @@
 BpP3
 ====
 
-
-Add a short description here!
+Smart SV aware primer design
 
 
 Description
 ===========
 
-A LONGER DESCRIPTION OF YOUR PROJECT GOES HERE...
+Software available via docker on talkowski/bpp3
 
 
 Note
