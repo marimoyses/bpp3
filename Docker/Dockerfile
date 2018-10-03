@@ -7,7 +7,7 @@ MAINTAINER "Harold Wang <haroldzwang@gmail.com>"
 
 # Create python environment
 RUN conda update -n base conda
-RUN conda install -y -c bioconda python=3.6 numpy scipy cython natsort boto3 pandas scikit-learn
+RUN conda install -y -c bioconda python=3.6 numpy scipy cython natsort boto3 pandas scikit-learn simplejson
 
 # Install make and zlib
 RUN apt-get -y update && apt-get -y install --fix-missing build-essential zlib1g-dev unzip libpng-dev
